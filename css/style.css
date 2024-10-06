@@ -1,0 +1,94 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Sección principal */
+.main-content {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.section-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.section-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.section-card h3 {
+    font-size: 18px;
+    color: #333;
+}

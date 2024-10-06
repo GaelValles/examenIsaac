@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Variables */
+:root {
+    --card-width: 350px;
+    --card-height: 500px;
+    --primary-color: #feffff;
+    --secondary-color: #081225;
+    --text-color: #ffffff;
+    --background-color: #323c41;
+    --overlay-color: rgba(84, 104, 110, 0.4);
+    --hover-overlay-color: rgba(84, 104, 110, 0.8);
+}
+
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ajusta para que el contenido comience desde la parte superior */
+    min-height: 100vh; /* Permitir que el contenido crezca más allá de la pantalla */
+}
+
+nav {
+    width: 100%;
+    background-color: #222;
+    padding: 20px;
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0;
+    z-index: 100; /* Asegura que esté encima del resto del contenido */
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav .btn {
+    background-color: #9CC9E3;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+    padding: 80px 0; /* Aumentado el padding para dar espacio al menú */
+}
+
+.sections {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px; /* Margen superior para evitar superposición con el menú */
+}
+
+/* Tarjetas */
+.blog-card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background: #0d161b no-repeat center center / cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.7);
+}
+
+.title-content {
+    text-align: center;
+    margin: 70px 0 0 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+hr {
+    width: 50px;
+    height: 3px;
+    margin: 20px auto;
+    background-color: var(--secondary-color);
+}
+
+.card-info {
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    padding: 0 20px;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+.blog-card:hover .card-info {
+    opacity: 1;
+    bottom: 120px;
+}
